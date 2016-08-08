@@ -1,12 +1,38 @@
 app.js filter=lfs diff=lfs merge=lfs -text
 bin filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
 diagnostic.data filter=lfs diff=lfs merge=lfs -text
 gulpfile.js filter=lfs diff=lfs merge=lfs -text
+=======
+collection-0--2037289857988300859.wt filter=lfs diff=lfs merge=lfs -text
+collection-0--628470864885107843.wt filter=lfs diff=lfs merge=lfs -text
+diagnostic.data filter=lfs diff=lfs merge=lfs -text
+gulpfile.js filter=lfs diff=lfs merge=lfs -text
+index-1--2037289857988300859.wt filter=lfs diff=lfs merge=lfs -text
+index-1--628470864885107843.wt filter=lfs diff=lfs merge=lfs -text
+index-2--2037289857988300859.wt filter=lfs diff=lfs merge=lfs -text
+journal filter=lfs diff=lfs merge=lfs -text
+_mdb_catalog.wt filter=lfs diff=lfs merge=lfs -text
+>>>>>>> b4fef18
 models filter=lfs diff=lfs merge=lfs -text
 mongod.lock filter=lfs diff=lfs merge=lfs -text
 package.json filter=lfs diff=lfs merge=lfs -text
 public filter=lfs diff=lfs merge=lfs -text
 routes filter=lfs diff=lfs merge=lfs -text
 simpleServer.js filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
 storage.bson filter=lfs diff=lfs merge=lfs -text
 views filter=lfs diff=lfs merge=lfs -text
+=======
+sizeStorer.wt filter=lfs diff=lfs merge=lfs -text
+storage.bson filter=lfs diff=lfs merge=lfs -text
+views filter=lfs diff=lfs merge=lfs -text
+WiredTiger filter=lfs diff=lfs merge=lfs -text
+WiredTigerLAS.wt filter=lfs diff=lfs merge=lfs -text
+WiredTiger.lock filter=lfs diff=lfs merge=lfs -text
+WiredTiger.turtle filter=lfs diff=lfs merge=lfs -text
+WiredTiger.wt filter=lfs diff=lfs merge=lfs -text
+journal/WiredTigerLog.0000000002 filter=lfs diff=lfs merge=lfs -text
+journal/WiredTigerPreplog.0000000001 filter=lfs diff=lfs merge=lfs -text
+journal/WiredTigerPreplog.0000000002 filter=lfs diff=lfs merge=lfs -text
+>>>>>>> b4fef18
