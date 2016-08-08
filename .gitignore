@@ -2,3 +2,6 @@ journal/*
 *.wt
 *.data
 *.lock
+week-2/*.wt
+week-2/*.data
+week-2/journal/*
