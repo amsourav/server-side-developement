@@ -11,11 +11,15 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "bunyan": "^1.8.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "fs": "0.0.2",
+    "hbs": "^4.0.0",
+    "jade": "^1.11.0",
     "jslint": "^0.10.3",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
+    "serve-favicon": "^2.3.0",
     "winston": "^2.2.0"
   }
 }

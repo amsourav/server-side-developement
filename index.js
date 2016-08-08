@@ -1,49 +1,36 @@
 var express = require('express');
-var bodyParser = require('body-parser');
-var fs = require('fs');
 var path = require('path');
-
-var app = express();
-var dishRouter = express.Router();
-
-// Loggers
-var morgan = require('morgan');
-app.use(morgan('dev'));
-// End Loggers
+var logger = require('morgan');
+var bodyParser = require('body-parser');
 
 var hostname = 'localhost';
 var port = 3000;
 
-dishRouter.use(bodyParser.json());
+var dishRouter = require('./routes/dishRouter');
+var promoRouter = require('./routes/promotionsRouter');
+var leadershipRouter = require('./routes/leadershipRouter');
 
-dishRouter.route('/')
-	.all(function(req, res, next){
-	  res.writeHead(200, { 'Content-Type': 'text/plain' });
-      next();
-	})
-	.get(function(req, res, next){
-		res.end('Will send all the dishes to you!');
-	})
-	.post(function(req, res, next){
-		res.end('Will add the dish: ' + req.body.name + ' with details: ' + req.body.description);
-		debugger;	
-	});
+var app = express();
 
-dishRouter.route('/:dishId')
-	.all(function(req, res, next){
-	  res.writeHead(200, { 'Content-Type': 'text/plain' });
-      next();
-	})
-	.get(function(req, res, next){
-		res.end('Showing dish with id ' + req.params.dishId)
-	});
+app.set('view engine', 'hbs');
 
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false })); // enables x-www-form-urlencoded
 
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/dishes', dishRouter);
-app.use(express.static(__dirname + '/public'));
+app.use('/promotions', promoRouter);
+app.use('/leadership', leadershipRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
 
 app.listen(port, hostname, function(){
-	console.log('running on http://localhost:3000!');
+  console.log('Server running at http://'+hostname+':'+port);
 });
