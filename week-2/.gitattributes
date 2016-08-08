@@ -1,0 +1,12 @@
+app.js filter=lfs diff=lfs merge=lfs -text
+bin filter=lfs diff=lfs merge=lfs -text
+diagnostic.data filter=lfs diff=lfs merge=lfs -text
+gulpfile.js filter=lfs diff=lfs merge=lfs -text
+models filter=lfs diff=lfs merge=lfs -text
+mongod.lock filter=lfs diff=lfs merge=lfs -text
+package.json filter=lfs diff=lfs merge=lfs -text
+public filter=lfs diff=lfs merge=lfs -text
+routes filter=lfs diff=lfs merge=lfs -text
+simpleServer.js filter=lfs diff=lfs merge=lfs -text
+storage.bson filter=lfs diff=lfs merge=lfs -text
+views filter=lfs diff=lfs merge=lfs -text
