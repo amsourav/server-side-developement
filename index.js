@@ -12,6 +12,8 @@ var leadershipRouter = require('./routes/leadershipRouter');
 
 var app = express();
 
+var db = require('./db.js')
+
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
